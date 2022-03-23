@@ -1,0 +1,20 @@
+import java.util.Arrays;
+public class Q1 {
+    public static void main(String[] args) {
+        int[]x={10,15,20,25,30};
+        System.out.println(Arrays.toString(x));
+        System.out.println("converted =");
+        System.out.println(Arrays.toString(connverted(x)));
+    }
+
+    public static int[] connverted(int[]y){
+        int a=y.length-1;
+        for (int i = 0; i < y.length/2; i++) {
+            int swab=y[i];
+            y[i]=y[a];
+            y[a]=swab;
+            a--;
+        }
+        return y;
+    }
+}
